@@ -211,8 +211,17 @@
     justify-content: center;
     gap: 16px;
     width: 100%;
-    max-width: 480px;
+    max-width: 560px;
     position: relative;
+  }
+  .sekben-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 25%;
+    right: 25%;
+    height: 3px;
+    background: linear-gradient(to right, var(--hijau-tengah), var(--emas), var(--hijau-tengah));
   }
   .sekben-item {
     flex: 1;
@@ -375,7 +384,7 @@
     <div class="level">
       <div class="kotak tipe-penasehat">
         <div class="kotak-label">Penasehat</div>
-        <div class="kotak-nama">Jaja<br>Mamat B</div>
+        <div class="kotak-nama">Ust.Jaja<br>Mamat B</div>
       </div>
     </div>
 
@@ -385,7 +394,7 @@
     <div class="level">
       <div class="kotak tipe-ketua">
         <div class="kotak-label">Ketua</div>
-        <div class="kotak-nama">Akang</div>
+        <div class="kotak-nama">Afif M</div>
       </div>
     </div>
 
@@ -401,14 +410,23 @@
 
     <div class="garis-turun" style="height:24px;"></div>
 
-    <!-- SEKRETARIS -->
+    <!-- SEKRETARIS & BENDAHARA -->
     <div class="level">
       <div class="sekben-wrapper">
         <div class="sekben-item">
-          <div class="garis-turun" style="height:24px;"></div>
+          <div class="sekben-garis-h"></div>
+          <div class="garis-turun" style="height:16px;"></div>
           <div class="kotak tipe-sekretaris">
             <div class="kotak-label">Sekretaris</div>
-            <div class="kotak-nama">Wahyu<br>Fitri</div>
+            <div class="kotak-nama">Wahyu RT</div>
+          </div>
+        </div>
+        <div class="sekben-item">
+          <div class="sekben-garis-h kanan"></div>
+          <div class="garis-turun" style="height:16px;"></div>
+          <div class="kotak tipe-bendahara">
+            <div class="kotak-label">Bendahara</div>
+            <div class="kotak-nama">Elon<br>Fitri</div>
           </div>
         </div>
       </div>
@@ -427,7 +445,7 @@
             <div class="kotak tipe-seksi">
               <div class="kotak-label">Seksi</div>
               <div class="kotak-nama">Pembangunan</div>
-              <div class="kotak-anggota">Ikut<br>Budi</div>
+              <div class="kotak-anggota">Ikun<br>Budi</div>
             </div>
           </div>
 
@@ -454,7 +472,7 @@
             <div class="kotak tipe-seksi">
               <div class="kotak-label">Seksi</div>
               <div class="kotak-nama">Pendidikan</div>
-              <div class="kotak-anggota">Dede Mumu<br>Dedy</div>
+              <div class="kotak-anggota">Dede Mumu<br>Dedi</div>
             </div>
           </div>
 
