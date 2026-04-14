@@ -160,32 +160,34 @@
   }
   .tipe-seksi .kotak-label { color: var(--hijau-tengah); }
 
-  /* NAMA KOSONG */
-  .kotak-nama-kosong {
+  /* NAMA ANGGOTA */
+  .kotak-anggota {
     margin-top: 6px;
     border-top: 1.5px dashed rgba(45,106,79,0.35);
     padding-top: 5px;
-    font-size: 0.72rem;
-    font-weight: 400;
-    color: #aaa;
-    font-style: italic;
-    letter-spacing: 0.04em;
-    min-height: 20px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    line-height: 1.5;
   }
-  .tipe-pelindung .kotak-nama-kosong,
-  .tipe-penasehat .kotak-nama-kosong {
+  .tipe-pelindung .kotak-anggota,
+  .tipe-penasehat .kotak-anggota {
     border-top-color: rgba(212,160,23,0.35);
-    color: rgba(240,192,64,0.6);
+    color: rgba(240,192,64,0.95);
   }
-  .tipe-ketua .kotak-nama-kosong,
-  .tipe-wakil .kotak-nama-kosong {
+  .tipe-ketua .kotak-anggota,
+  .tipe-wakil .kotak-anggota {
     border-top-color: rgba(26,71,49,0.3);
-    color: rgba(26,71,49,0.45);
+    color: var(--hijau-tua);
   }
-  .tipe-sekretaris .kotak-nama-kosong,
-  .tipe-bendahara .kotak-nama-kosong {
+  .tipe-sekretaris .kotak-anggota,
+  .tipe-bendahara .kotak-anggota {
     border-top-color: rgba(255,255,255,0.35);
-    color: rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.95);
+  }
+  .tipe-seksi .kotak-anggota {
+    border-top-color: rgba(64,145,108,0.35);
+    color: var(--hijau-tua);
   }
 
   /* GARIS PENGHUBUNG */
@@ -204,7 +206,6 @@
   }
 
   /* ===== SEKRETARIS & BENDAHARA ===== */
-  /* Desktop: side by side */
   .sekben-wrapper {
     display: flex;
     justify-content: center;
@@ -219,7 +220,6 @@
     flex-direction: column;
     align-items: center;
   }
-  /* Garis horizontal penghubung sekretaris-bendahara */
   .sekben-garis-h {
     width: calc(50% + 1.5px);
     height: 3px;
@@ -231,7 +231,6 @@
     align-self: flex-start;
   }
 
-  /* Mobile: stack vertikal */
   @media (max-width: 480px) {
     .sekben-wrapper {
       flex-direction: column;
@@ -276,7 +275,6 @@
     white-space: nowrap;
   }
 
-  /* Seksi grid: desktop 5 kolom, tablet 3, mobile 2 */
   .seksi-row {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -300,7 +298,6 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 10px;
     }
-    /* Seksi ke-5 berada di tengah */
     .seksi-item:last-child {
       grid-column: 1 / -1;
       max-width: 180px;
@@ -314,7 +311,6 @@
     align-items: center;
   }
 
-  /* LABEL SEKSI */
   .label-seksi {
     font-size: 0.78rem;
     text-transform: uppercase;
@@ -327,7 +323,6 @@
     margin-bottom: 2px;
   }
 
-  /* PERIODE */
   .periode {
     text-align: center;
     margin-top: 28px;
@@ -338,14 +333,12 @@
     padding: 0 10px;
   }
 
-  /* ICON MASJID */
   .ikon {
     font-size: 1.4rem;
     margin-bottom: 4px;
     display: block;
   }
 
-  /* ANIMASI */
   @keyframes fadeSlide {
     from { opacity: 0; transform: translateY(16px); }
     to { opacity: 1; transform: translateY(0); }
@@ -372,8 +365,7 @@
       <div class="kotak tipe-pelindung">
         <span class="ikon">🕌</span>
         <div class="kotak-label">Pelindung</div>
-        <div class="kotak-nama">Pelindung</div>
-        <div class="kotak-nama-kosong">.................................</div>
+        <div class="kotak-nama">DKM</div>
       </div>
     </div>
 
@@ -383,8 +375,7 @@
     <div class="level">
       <div class="kotak tipe-penasehat">
         <div class="kotak-label">Penasehat</div>
-        <div class="kotak-nama">Penasehat</div>
-        <div class="kotak-nama-kosong">.................................</div>
+        <div class="kotak-nama">Jaja<br>Mamat B</div>
       </div>
     </div>
 
@@ -394,8 +385,7 @@
     <div class="level">
       <div class="kotak tipe-ketua">
         <div class="kotak-label">Ketua</div>
-        <div class="kotak-nama">Ketua</div>
-        <div class="kotak-nama-kosong">.................................</div>
+        <div class="kotak-nama">Akang</div>
       </div>
     </div>
 
@@ -405,32 +395,20 @@
     <div class="level">
       <div class="kotak tipe-wakil">
         <div class="kotak-label">Wakil Ketua</div>
-        <div class="kotak-nama">Wakil Ketua</div>
-        <div class="kotak-nama-kosong">.................................</div>
+        <div class="kotak-nama">Opa Mustofa</div>
       </div>
     </div>
 
     <div class="garis-turun" style="height:24px;"></div>
 
-    <!-- SEKRETARIS & BENDAHARA -->
+    <!-- SEKRETARIS -->
     <div class="level">
       <div class="sekben-wrapper">
-        <!-- Sekretaris -->
         <div class="sekben-item">
           <div class="garis-turun" style="height:24px;"></div>
           <div class="kotak tipe-sekretaris">
             <div class="kotak-label">Sekretaris</div>
-            <div class="kotak-nama">Sekretaris</div>
-            <div class="kotak-nama-kosong">.................................</div>
-          </div>
-        </div>
-        <!-- Bendahara -->
-        <div class="sekben-item">
-          <div class="garis-turun" style="height:24px;"></div>
-          <div class="kotak tipe-bendahara">
-            <div class="kotak-label">Bendahara</div>
-            <div class="kotak-nama">Bendahara</div>
-            <div class="kotak-nama-kosong">.................................</div>
+            <div class="kotak-nama">Wahyu<br>Fitri</div>
           </div>
         </div>
       </div>
@@ -443,41 +421,52 @@
       <div class="seksi-bingkai">
         <span class="seksi-bingkai-label">✦ Seksi-Seksi ✦</span>
         <div class="seksi-row">
-          <div class="seksi-item">
-            <div class="kotak tipe-seksi">
-              <div class="kotak-label">Seksi</div>
-              <div class="kotak-nama">Usaha</div>
-              <div class="kotak-nama-kosong">.................</div>
-            </div>
-          </div>
-          <div class="seksi-item">
-            <div class="kotak tipe-seksi">
-              <div class="kotak-label">Seksi</div>
-              <div class="kotak-nama">Humas</div>
-              <div class="kotak-nama-kosong">.................</div>
-            </div>
-          </div>
-          <div class="seksi-item">
-            <div class="kotak tipe-seksi">
-              <div class="kotak-label">Seksi</div>
-              <div class="kotak-nama">Pendidikan</div>
-              <div class="kotak-nama-kosong">.................</div>
-            </div>
-          </div>
-          <div class="seksi-item">
-            <div class="kotak tipe-seksi">
-              <div class="kotak-label">Seksi</div>
-              <div class="kotak-nama">Kebersihan</div>
-              <div class="kotak-nama-kosong">.................</div>
-            </div>
-          </div>
+
+          <!-- Pembangunan -->
           <div class="seksi-item">
             <div class="kotak tipe-seksi">
               <div class="kotak-label">Seksi</div>
               <div class="kotak-nama">Pembangunan</div>
-              <div class="kotak-nama-kosong">.................</div>
+              <div class="kotak-anggota">Ikut<br>Budi</div>
             </div>
           </div>
+
+          <!-- Humas -->
+          <div class="seksi-item">
+            <div class="kotak tipe-seksi">
+              <div class="kotak-label">Seksi</div>
+              <div class="kotak-nama">Humas</div>
+              <div class="kotak-anggota">Mendri<br>Mamad<br>Ajid</div>
+            </div>
+          </div>
+
+          <!-- Usaha -->
+          <div class="seksi-item">
+            <div class="kotak tipe-seksi">
+              <div class="kotak-label">Seksi</div>
+              <div class="kotak-nama">Usaha</div>
+              <div class="kotak-anggota">E Mahmud<br>Iwan<br>Yayan<br>Dedi<br>Arif</div>
+            </div>
+          </div>
+
+          <!-- Pendidikan -->
+          <div class="seksi-item">
+            <div class="kotak tipe-seksi">
+              <div class="kotak-label">Seksi</div>
+              <div class="kotak-nama">Pendidikan</div>
+              <div class="kotak-anggota">Dede Mumu<br>Dedy</div>
+            </div>
+          </div>
+
+          <!-- Kebersihan -->
+          <div class="seksi-item">
+            <div class="kotak tipe-seksi">
+              <div class="kotak-label">Seksi</div>
+              <div class="kotak-nama">Kebersihan</div>
+              <div class="kotak-anggota">E Hermayani<br>Oyom</div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
