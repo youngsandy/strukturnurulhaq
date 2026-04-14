@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>Struktur Kepengurusan Masjid Nurul Haq</title>
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -23,7 +23,7 @@
     background: var(--krem);
     font-family: 'Tajawal', sans-serif;
     min-height: 100vh;
-    padding: 30px 20px;
+    padding: 20px 14px;
     background-image:
       radial-gradient(circle at 10% 20%, rgba(45,106,79,0.08) 0%, transparent 50%),
       radial-gradient(circle at 90% 80%, rgba(212,160,23,0.08) 0%, transparent 50%);
@@ -37,7 +37,7 @@
   /* HEADER */
   .header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 28px;
     position: relative;
   }
   .header::before {
@@ -46,7 +46,7 @@
     width: 100%;
     height: 4px;
     background: linear-gradient(90deg, transparent, var(--emas), var(--hijau-tengah), var(--emas), transparent);
-    margin-bottom: 18px;
+    margin-bottom: 14px;
     border-radius: 2px;
   }
   .header::after {
@@ -55,32 +55,32 @@
     width: 100%;
     height: 4px;
     background: linear-gradient(90deg, transparent, var(--emas), var(--hijau-tengah), var(--emas), transparent);
-    margin-top: 18px;
+    margin-top: 14px;
     border-radius: 2px;
   }
   .arabik {
     font-family: 'Amiri', serif;
-    font-size: 2.2rem;
+    font-size: clamp(1.4rem, 5vw, 2.2rem);
     color: var(--hijau-tua);
     letter-spacing: 0.04em;
     line-height: 1.3;
   }
   .judul-utama {
-    font-size: 1.55rem;
+    font-size: clamp(1rem, 4vw, 1.55rem);
     font-weight: 700;
     color: var(--hijau-tua);
     text-transform: uppercase;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
     margin-top: 6px;
   }
   .sub-judul {
-    font-size: 1.05rem;
+    font-size: clamp(0.85rem, 3vw, 1.05rem);
     color: var(--emas);
     font-weight: 500;
     letter-spacing: 0.08em;
   }
 
-  /* ORNAMEN PEMISAH */
+  /* ORNAMEN */
   .ornamen {
     text-align: center;
     color: var(--emas);
@@ -100,28 +100,29 @@
   /* KOTAK UMUM */
   .kotak {
     border-radius: 10px;
-    padding: 14px 28px;
+    padding: 12px 20px;
     text-align: center;
     position: relative;
     font-weight: 600;
     letter-spacing: 0.04em;
     box-shadow: 0 4px 16px rgba(26,71,49,0.13);
     transition: transform 0.2s, box-shadow 0.2s;
-    min-width: 200px;
+    width: 100%;
+    max-width: 280px;
   }
-  .kotak:hover {
+  .kotak:active {
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(26,71,49,0.2);
   }
   .kotak-label {
-    font-size: 0.72rem;
+    font-size: clamp(0.62rem, 2vw, 0.72rem);
     text-transform: uppercase;
     letter-spacing: 0.15em;
     opacity: 0.75;
     margin-bottom: 2px;
   }
   .kotak-nama {
-    font-size: 1rem;
+    font-size: clamp(0.88rem, 3vw, 1rem);
     font-weight: 700;
   }
 
@@ -130,51 +131,46 @@
     background: linear-gradient(135deg, var(--hijau-tua), #0f2e1f);
     color: var(--emas-muda);
     border: 2px solid var(--emas);
-    min-width: 230px;
   }
   .tipe-penasehat {
     background: linear-gradient(135deg, #2a5c44, var(--hijau-tua));
     color: var(--emas-muda);
     border: 2px solid #a07a10;
-    min-width: 210px;
   }
   .tipe-ketua {
     background: linear-gradient(135deg, var(--emas), #b8860b);
     color: var(--hijau-tua);
     border: 2px solid var(--hijau-tua);
-    min-width: 230px;
   }
   .tipe-wakil {
     background: linear-gradient(135deg, #e8b820, var(--emas));
     color: var(--hijau-tua);
     border: 2px solid var(--hijau-tengah);
-    min-width: 200px;
   }
   .tipe-sekretaris, .tipe-bendahara {
     background: linear-gradient(135deg, var(--hijau-muda), var(--hijau-tengah));
     color: #fff;
     border: 2px solid var(--hijau-tua);
-    min-width: 180px;
   }
   .tipe-seksi {
     background: linear-gradient(135deg, #fff, var(--abu));
     color: var(--hijau-tua);
     border: 2px solid var(--hijau-muda);
-    min-width: 140px;
+    max-width: 100%;
   }
   .tipe-seksi .kotak-label { color: var(--hijau-tengah); }
 
   /* NAMA KOSONG */
   .kotak-nama-kosong {
-    margin-top: 8px;
+    margin-top: 6px;
     border-top: 1.5px dashed rgba(45,106,79,0.35);
-    padding-top: 6px;
-    font-size: 0.75rem;
+    padding-top: 5px;
+    font-size: 0.72rem;
     font-weight: 400;
     color: #aaa;
     font-style: italic;
     letter-spacing: 0.04em;
-    min-height: 22px;
+    min-height: 20px;
   }
   .tipe-pelindung .kotak-nama-kosong,
   .tipe-penasehat .kotak-nama-kosong {
@@ -198,73 +194,120 @@
     background: linear-gradient(to bottom, var(--emas), var(--hijau-tengah));
     margin: 0 auto;
   }
-  .garis-h {
-    height: 3px;
-    background: linear-gradient(to right, var(--hijau-tengah), var(--emas));
-    border-radius: 2px;
-  }
-
-  /* ROW FLEX */
-  .row {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    align-items: flex-start;
-    position: relative;
-    width: 100%;
-  }
 
   /* LEVEL WRAPPER */
   .level {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  /* GARIS T UNTUK BRANCHING */
-  .cabang-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
   }
-  .cabang-horizontal {
+
+  /* ===== SEKRETARIS & BENDAHARA ===== */
+  /* Desktop: side by side */
+  .sekben-wrapper {
     display: flex;
-    align-items: flex-start;
     justify-content: center;
-    position: relative;
+    gap: 16px;
     width: 100%;
+    max-width: 480px;
+    position: relative;
   }
-  .cabang-item {
+  .sekben-item {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+  /* Garis horizontal penghubung sekretaris-bendahara */
+  .sekben-garis-h {
+    width: calc(50% + 1.5px);
+    height: 3px;
+    background: linear-gradient(to right, var(--hijau-tengah), var(--emas));
+    align-self: flex-end;
+  }
+  .sekben-garis-h.kanan {
+    background: linear-gradient(to right, var(--emas), var(--hijau-tengah));
+    align-self: flex-start;
+  }
 
-  /* GARIS ATAS SEKSI */
+  /* Mobile: stack vertikal */
+  @media (max-width: 480px) {
+    .sekben-wrapper {
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      max-width: 100%;
+    }
+    .sekben-garis-h { display: none; }
+    .sekben-item {
+      width: 100%;
+    }
+  }
+
+  /* ===== SEKSI-SEKSI ===== */
   .seksi-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
-  .seksi-row {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
+  .seksi-bingkai {
+    border: 2px dashed rgba(64,145,108,0.4);
+    border-radius: 16px;
+    padding: 20px 16px 18px;
+    background: rgba(255,255,255,0.5);
     position: relative;
-    padding-top: 0;
+    width: 100%;
+    max-width: 880px;
+  }
+  .seksi-bingkai-label {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--krem);
+    padding: 0 14px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--emas);
+    white-space: nowrap;
+  }
+
+  /* Seksi grid: desktop 5 kolom, tablet 3, mobile 2 */
+  .seksi-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    position: relative;
+    padding-top: 20px;
   }
   .seksi-row::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 10%;
+    right: 10%;
     height: 3px;
-    background: linear-gradient(to right, var(--hijau-muda), var(--emas), var(--hijau-muda));
+    background: linear-gradient(to right, transparent, var(--emas), var(--hijau-tengah), var(--emas), transparent);
     border-radius: 2px;
   }
+
+  @media (max-width: 640px) {
+    .seksi-row {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    /* Seksi ke-5 berada di tengah */
+    .seksi-item:last-child {
+      grid-column: 1 / -1;
+      max-width: 180px;
+      margin: 0 auto;
+    }
+  }
+
   .seksi-item {
     display: flex;
     flex-direction: column;
@@ -287,36 +330,19 @@
   /* PERIODE */
   .periode {
     text-align: center;
-    margin-top: 36px;
-    font-size: 0.88rem;
+    margin-top: 28px;
+    font-size: clamp(0.78rem, 2.5vw, 0.88rem);
     color: var(--hijau-tengah);
     font-style: italic;
     letter-spacing: 0.05em;
+    padding: 0 10px;
   }
 
-  /* BINGKAI SEKSI */
-  .seksi-bingkai {
-    border: 2px dashed rgba(64,145,108,0.4);
-    border-radius: 16px;
-    padding: 20px 24px 18px;
-    background: rgba(255,255,255,0.5);
-    position: relative;
-    width: 100%;
-    max-width: 880px;
-  }
-  .seksi-bingkai-label {
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--krem);
-    padding: 0 14px;
-    font-size: 0.78rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    color: var(--emas);
-    white-space: nowrap;
+  /* ICON MASJID */
+  .ikon {
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+    display: block;
   }
 
   /* ANIMASI */
@@ -325,18 +351,6 @@
     to { opacity: 1; transform: translateY(0); }
   }
   .kotak { animation: fadeSlide 0.5s ease both; }
-  .level:nth-child(1) .kotak { animation-delay: 0.05s; }
-  .level:nth-child(2) .kotak { animation-delay: 0.15s; }
-  .level:nth-child(3) .kotak { animation-delay: 0.25s; }
-  .level:nth-child(4) .kotak { animation-delay: 0.35s; }
-  .level:nth-child(5) .kotak { animation-delay: 0.45s; }
-
-  /* ICON MASJID */
-  .ikon {
-    font-size: 1.4rem;
-    margin-bottom: 4px;
-    display: block;
-  }
 </style>
 </head>
 <body>
@@ -363,7 +377,7 @@
       </div>
     </div>
 
-    <div class="garis-turun" style="height:28px;"></div>
+    <div class="garis-turun" style="height:24px;"></div>
 
     <!-- PENASEHAT -->
     <div class="level">
@@ -374,7 +388,7 @@
       </div>
     </div>
 
-    <div class="garis-turun" style="height:28px;"></div>
+    <div class="garis-turun" style="height:24px;"></div>
 
     <!-- KETUA -->
     <div class="level">
@@ -385,7 +399,7 @@
       </div>
     </div>
 
-    <div class="garis-turun" style="height:28px;"></div>
+    <div class="garis-turun" style="height:24px;"></div>
 
     <!-- WAKIL KETUA -->
     <div class="level">
@@ -396,29 +410,24 @@
       </div>
     </div>
 
-    <div class="garis-turun" style="height:28px;"></div>
+    <div class="garis-turun" style="height:24px;"></div>
 
     <!-- SEKRETARIS & BENDAHARA -->
-    <div class="cabang-wrapper">
-      <!-- Garis horizontal antara sekretaris dan bendahara -->
-      <div style="display:flex; align-items:flex-start; justify-content:center; gap:0; width:100%; max-width:480px; position:relative;">
-        <!-- Kiri: Sekretaris -->
-        <div class="cabang-item" style="flex:1; align-items:flex-end; display:flex; flex-direction:column;">
-          <div style="height:28px; width:3px; background:linear-gradient(to bottom, var(--emas), var(--hijau-tengah)); margin-right:50%;"></div>
-          <div class="kotak tipe-sekretaris" style="align-self:center; margin-right:10px;">
+    <div class="level">
+      <div class="sekben-wrapper">
+        <!-- Sekretaris -->
+        <div class="sekben-item">
+          <div class="garis-turun" style="height:24px;"></div>
+          <div class="kotak tipe-sekretaris">
             <div class="kotak-label">Sekretaris</div>
             <div class="kotak-nama">Sekretaris</div>
             <div class="kotak-nama-kosong">.................................</div>
           </div>
         </div>
-
-        <!-- Garis tengah vertikal -->
-        <div style="width:3px; height:28px; background:linear-gradient(to bottom, var(--emas), var(--hijau-tengah)); flex-shrink:0; margin-top:0;"></div>
-
-        <!-- Kanan: Bendahara -->
-        <div class="cabang-item" style="flex:1; align-items:flex-start; display:flex; flex-direction:column;">
-          <div style="height:28px; width:3px; background:linear-gradient(to bottom, var(--emas), var(--hijau-tengah)); margin-left:50%;"></div>
-          <div class="kotak tipe-bendahara" style="align-self:center; margin-left:10px;">
+        <!-- Bendahara -->
+        <div class="sekben-item">
+          <div class="garis-turun" style="height:24px;"></div>
+          <div class="kotak tipe-bendahara">
             <div class="kotak-label">Bendahara</div>
             <div class="kotak-nama">Bendahara</div>
             <div class="kotak-nama-kosong">.................................</div>
@@ -427,69 +436,46 @@
       </div>
     </div>
 
-    <div class="garis-turun" style="height:32px;"></div>
+    <div class="garis-turun" style="height:28px;"></div>
 
     <!-- SEKSI-SEKSI -->
-    <div class="seksi-container" style="width:100%; max-width:880px;">
+    <div class="seksi-container" style="width:100%;">
       <div class="seksi-bingkai">
         <span class="seksi-bingkai-label">✦ Seksi-Seksi ✦</span>
-        <div class="seksi-row" style="--count:4;">
-          <!-- Garis horisontal di atas seksi -->
-          <div style="
-            position:absolute; top:0;
-            left:12%; right:12%;
-            height:3px;
-            background:linear-gradient(to right, transparent, var(--emas), var(--hijau-tengah), var(--emas), transparent);
-            border-radius:2px;
-          "></div>
-
-          <!-- Seksi Usaha -->
+        <div class="seksi-row">
           <div class="seksi-item">
-            <div style="height:24px; width:3px; background:linear-gradient(to bottom,var(--emas),var(--hijau-muda));"></div>
             <div class="kotak tipe-seksi">
               <div class="kotak-label">Seksi</div>
               <div class="kotak-nama">Usaha</div>
-              <div class="kotak-nama-kosong">.................................</div>
+              <div class="kotak-nama-kosong">.................</div>
             </div>
           </div>
-
-          <!-- Seksi Humas -->
           <div class="seksi-item">
-            <div style="height:24px; width:3px; background:linear-gradient(to bottom,var(--emas),var(--hijau-muda));"></div>
             <div class="kotak tipe-seksi">
               <div class="kotak-label">Seksi</div>
               <div class="kotak-nama">Humas</div>
-              <div class="kotak-nama-kosong">.................................</div>
+              <div class="kotak-nama-kosong">.................</div>
             </div>
           </div>
-
-          <!-- Seksi Pendidikan -->
           <div class="seksi-item">
-            <div style="height:24px; width:3px; background:linear-gradient(to bottom,var(--emas),var(--hijau-muda));"></div>
             <div class="kotak tipe-seksi">
               <div class="kotak-label">Seksi</div>
               <div class="kotak-nama">Pendidikan</div>
-              <div class="kotak-nama-kosong">.................................</div>
+              <div class="kotak-nama-kosong">.................</div>
             </div>
           </div>
-
-          <!-- Seksi Kebersihan -->
           <div class="seksi-item">
-            <div style="height:24px; width:3px; background:linear-gradient(to bottom,var(--emas),var(--hijau-muda));"></div>
             <div class="kotak tipe-seksi">
               <div class="kotak-label">Seksi</div>
               <div class="kotak-nama">Kebersihan</div>
-              <div class="kotak-nama-kosong">.................................</div>
+              <div class="kotak-nama-kosong">.................</div>
             </div>
           </div>
-
-          <!-- Seksi Pembangunan -->
           <div class="seksi-item">
-            <div style="height:24px; width:3px; background:linear-gradient(to bottom,var(--emas),var(--hijau-muda));"></div>
             <div class="kotak tipe-seksi">
               <div class="kotak-label">Seksi</div>
               <div class="kotak-nama">Pembangunan</div>
-              <div class="kotak-nama-kosong">.................................</div>
+              <div class="kotak-nama-kosong">.................</div>
             </div>
           </div>
         </div>
@@ -498,7 +484,7 @@
 
   </div><!-- end bagan -->
 
-  <div class="ornamen" style="margin-top:32px;">✦ ✦ ✦</div>
+  <div class="ornamen" style="margin-top:28px;">✦ ✦ ✦</div>
   <div class="periode">Semoga Allah SWT meridhoi setiap langkah kepengurusan ini</div>
 
 </div>
